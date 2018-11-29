@@ -1,0 +1,24 @@
+{% extends "@Core/Master/MenuTemplate.html.twig" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('Plugins/Argon/assets/css/argon.css') }}" />
+    <link rel="stylesheet" href="{{ asset('Plugins/Argon/assets/vendor/nucleo/css/nucleo.css') }}" />
+    <link rel="stylesheet" href="{{ asset('node_modules/@fortawesome/fontawesome-free/css/all.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('node_modules/jquery-ui-dist/jquery-ui.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('Plugins/Argon/assets/css/custom.css') }}" />
+{% endblock %}
+
+{% block navbar %}
+    
+    {% set theme = appSettings.get('argon', 'theme') %}
+    {% if theme == '' or theme == null %}
+        {% set theme = 'default' %}
+    {% endif %}
+
+    {% set navbarTheme = appSettings.get('bootswatch', 'navbar-theme') %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-{{ theme }} sticky-top d-print-none">
+        {% block navbarContent %}
+            {{ parent() }}
+        {% endblock %}
+    </nav>
+{% endblock %}

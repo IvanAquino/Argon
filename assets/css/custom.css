@@ -1,0 +1,87 @@
+body {
+    background: #f3f5f7;
+}
+
+.navbar .dropdown-toggle::after {
+    display: none;
+}
+
+.nav-pills-sm.nav > li > a,
+.nav-pills-sm a {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.table th {
+    border-top: none;
+}
+
+.clickable, .clickableRow:hover {
+    cursor: pointer;
+}
+
+.custom-checkbox-control {
+    position: relative;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    min-height: 1.2rem;
+    padding-left: 1.5rem;
+    margin-right: 1rem;
+}
+
+.dropdown-menu {
+    position: absolute !important;
+}
+
+.dropdown-submenu {
+    position: relative
+}
+
+.dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 101%;
+    margin-top: -6px;
+    margin-left: 0;
+    border-radius: 0.25rem;
+}
+.dropdown-submenu > .dropdown-menu::before {
+    left: -14px;
+    top: 5px;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+    animation: show-navbar-dropdown .25s ease forwards;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.dropdown-submenu > a::after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-left-width: 0.3em;
+    border-left-color: inherit;
+    margin-right: -0.6em;
+    margin-top: 0.6em;
+}
+
+.dropdown-submenu.pull-left {
+    float: none
+}
+
+.dropdown-submenu.pull-left > .dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.ui-autocomplete {
+    z-index: 500;
+}
